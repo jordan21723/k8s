@@ -1,0 +1,19 @@
+apiVersion: iam.kubesphere.io/v1alpha2
+kind: GlobalRole
+metadata:
+  annotations:
+    iam.kubesphere.io/dependencies: '["role-template-view-ki"]'
+    iam.kubesphere.io/module: Clusters Management
+    iam.kubesphere.io/role-template-rules: '{"ki": "manage"}'
+    kubesphere.io/alias-name: Ki Management
+  labels:
+    iam.kubesphere.io/role-template: "true"
+    kubefed.io/managed: "false"
+  name: role-template-manage-ki
+rules:
+- apiGroups:
+  - "core"
+  resources:
+  - '*'
+  verbs:
+  - '*'

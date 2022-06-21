@@ -1,0 +1,250 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ki-server-config
+  namespace: k8s-installer
+data:
+  config-server.yaml: |-
+    api-server:
+      api-port: 8099
+      enable-tls: false
+      jwt-expired-after-hours: 8
+      jwt-sign-method: HS256
+      jwt-sign-string: |-
+        LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFB
+        QUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJGd0FBQUFkemMyZ3RjbgpOaEFBQUFB
+        d0VBQVFBQUFRRUFyYkdsenMrZHUwZmI4NE5IbU8wa1VtRU9iZEFkSisvaGhsZ3QzTFU0WWxBUXRO
+        cUY4VUw3Clp5VEY3cDdTcFB0UnFRY1FyUTJzbE8zQmEydEttZFRhcUdIOWF2YVpWRm5sOXU4Vmc4
+        NG02NGdoTjhuTlI4QnN0QjFBTjkKbDl1K1BQYTR5TFF5WkY1dzZaSVA0Vy9RV2tkaHRxYWE5WkZR
+        Sk5qeW55N3FZc1B5QTRPODI4dFNOaldRSHU2YUNVK1RiTgpLRU1sUnB2RmhWMStmOTJxWGpkalBi
+        YS9DTys0bUhNNTMvby9VeW5TSlZ2eU9WUE4vdGErN29GQUhydnFLZXFYbFR5eEx0CnZveGNVWHpv
+        ZzNlY1F1NGdRaFFLSzAzSWZ4aG9LSjNaYnA0VGtxdm9HUGJ0S2NmYStIZ0Z1eXFncTI3T1dKYSta
+        Q2oweEMKclFLQUtpQWo3UUFBQThnOFNSNmtQRWtlcEFBQUFBZHpjMmd0Y25OaEFBQUJBUUN0c2FY
+        T3o1MjdSOXZ6ZzBlWTdTUlNZUQo1dDBCMG43K0dHV0MzY3RUaGlVQkMwMm9YeFF2dG5KTVh1bnRL
+        aysxR3BCeEN0RGF5VTdjRnJhMHFaMU5xb1lmMXE5cGxVCldlWDI3eFdEemlicmlDRTN5YzFId0d5
+        MEhVQTMyWDI3NDg5cmpJdERKa1huRHBrZy9oYjlCYVIyRzJwcHIxa1ZBazJQS2YKTHVwaXcvSURn
+        N3pieTFJMk5aQWU3cG9KVDVOczBvUXlWR204V0ZYWDUvM2FwZU4yTTl0cjhJNzdpWWN6bmYrajlU
+        S2RJbApXL0k1VTgzKzFyN3VnVUFldStvcDZwZVZQTEV1MitqRnhSZk9pRGQ1eEM3aUJDRkFvclRj
+        aC9HR2dvbmRsdW5oT1NxK2dZCjl1MHB4OXI0ZUFXN0txQ3JiczVZbHI1a0tQVEVLdEFvQXFJQ1B0
+        QUFBQUF3RUFBUUFBQVFBK1F1T3drbk56NG5wUmU4bDYKWStjVk1IMC9sODRidHIwY3J4Y2hla1JQ
+        Mld0anFNRkNqa1FYNFBLaWFvUVBaNWNLQStKU1pnaHJDaDYvSnFLREtlMkhWagpqRTBzaDdtQTM2
+        eWhEb1FrbHBQRTdMOUthRkJkRHhiMXJKcWtpTHhVbGd2K3hia2FpVS9vS2RkUGRBazNrMGJQZGtF
+        dHJYCjBRK0VOZ0ZDMG9ZaHlnOVZJSDVFQVdHOEgxZWRaOTVRRGsyZmJaYmJkdmJKUExJRjJEeWNr
+        ZlBLUmpZRkZKa2paV3hzcDMKUzJ4cXpkaE1IblNvZ0RWZ0ptalhKQ00vUTZZdTdBU1NvVTN0OFNl
+        VThtY1J0ZitDZUM1VnNNbkt3MFZNdjNmNnlCcmhObwprWGNsR0p0NVZrT3Y5ZlpXc3ZmUHprRFY4
+        M0RrOUhYVWNwZS9SNlYwVWJCeEFBQUFnQVA1QkNkbURKZ28vYkxONTZuZUJnCnoxNkpSdnBCbGFX
+        aENNTmZFNWUzVVZnQkpPWXRQRnpEN3NrSWZOVzRFdXQ3Rm94clJRUjBpenhHcGFuUTNRNitmNHR3
+        MW0KVi9ScGY5ZGdaV0dpS3dsR2gwMHlDQkx3Y2dPaXl5cUpNbllIaWJ1U1ZXOU1KanFSaE53T05C
+        NGtWczhhVUxEVWZVNWkvLwpKS2FhTkVrZmFMQUFBQWdRRGg3WlZUVjBHQ0lxK0Uwd24yckJwNlhx
+        RzA4dTZMTVpwbURZMFFXR3BvZElaWjEvazBmbzRFCngxN1RNZ3ZqNlkvYlBWZkl3TXVCS0ovNk5W
+        OVFsUmJydm5GYTd4elVGUENoWFRZNTVNNDFGaTJ0VDJNS2N0STA4VHlDNk8KSlFRYUJCNTlURXJx
+        NlRQclZWLzVySFptSVB2TEtKY1hibTNIUHlybmpLMGxGbmt3QUFBSUVBeE5BMG9EMS8xQk5PMTh0
+        YgozUENiZjZwdDVDeitQRitxNlZlb082U2N1T3VEL3hHNWQ0RC83ZnEweHNWVEVlTTB3UWFTYVVK
+        c3BQeC93VVhyMmZzWXRFCjNMUkh4cGp5bDdJV2NTOE14cFhNRWE5RDl6Y04wMTdmZHd5Y2tMWCtI
+        akdnWGlpQW1vTUE5UTlHSXU2VHFkQWZ1S1VtYTkKV2tzNmhGNUVRem9BZG44QUFBQU9jbTl2ZEVC
+        emFXMXZibk10Y0dNQkFnTUVCUT09Ci0tLS0tRU5EIE9QRU5TU0ggUFJJVkFURSBLRVktLS0tLQo=
+      resource-server-cidr: ""
+      resource-server-filepath: /opt/k8s-installer/resource
+      resource-server-port: 8079
+    cache:
+      cache-runtime: no-cache
+    etcd:
+      etcd-auth-mode: none
+      etcd-endpoints: http://ki-etcd.k8s-installer.svc:2379
+    host-requirement:
+      check-kernel-version: false
+      check-os-family: true
+      kernel-major: 3
+      kernel-sub: 10
+      kernel-ver: 0
+      support-os-family: centos
+      support-os-family-version: 7,
+    log:
+      log-level: 1
+      log-retention-period: 1
+    message-queue:
+      auth-mode: basic
+      ca-cert-path: ""
+      cert-path: ""
+      cluster-port: 9890
+      key-path: ""
+      message-queue-group-name: caas-node-status-report-queue
+      message-queue-leader: 127.0.0.1
+      message-queue-node-status-report-in-subject: caas-node-status-report-subject
+      message-queue-server-address: 127.0.0.1
+      message-queue-server-listening-on: 0.0.0.0
+      message-queue-subject-suffix: k8s-install
+      password: password
+      port: 9889
+      time-out-seconds: 10
+      username: username
+    server-id: server-MTAuMC4wLjU=
+    server-message-timeout-config:
+      task-basic-config-timeout: 5
+      task-cri-timeout: 500
+      task-kubeadm-init-first-control-plane-timeout: 300
+      task-kubeadm-join-control-plane-timeout: 300
+      task-kubeadm-join-worker-timeout: 300
+      task-kubectl-timeout: 5
+      task-prepare-offline-resource: 0
+      task-rename-hostname-timeout: 3
+      task-vip-timeout: 60
+    signal-port: 9090
+    disable-lazy-operation-log: true
+    is-test-node: true
+    console-title: "test"
+    console-resource-path: /tmp/image
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ki-server
+  namespace: k8s-installer
+  labels:
+    app: ki-server
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8099
+      targetPort: 8099
+      nodePort: 31785
+    - name: resource
+      protocol: TCP
+      port: 8079
+      targetPort: 8079
+      nodePort: 30756
+    - name: mq
+      protocol: TCP
+      port: 9889
+      targetPort: 9889
+      nodePort: 32713
+  selector:
+    app: ki-server
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ki-server-resource
+  namespace: k8s-installer
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: fuseim.pri/ifs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: nfs-sc
+  volumeMode: Filesystem
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ki-server
+  namespace: k8s-installer
+  labels:
+    app: ki-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ki-server
+  template:
+    metadata:
+      labels:
+        app: ki-server
+    spec:
+      volumes:
+        - name: volume-2igwyz
+          configMap:
+            name: ki-server-config
+            defaultMode: 420
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+            type: ''
+        - name: volume-b076fk
+          persistentVolumeClaim:
+            claimName: ki-server-resource
+      initContainers:
+        - name: init-resource
+          image: 'busybox:latest'
+          command:
+            - /bin/sh
+          args:
+            - '-c'
+            - >-
+              if [ ! -f "/opt/k8s-installer/.init" ]; then cd /opt/k8s-installer
+              && rm -rf resource && wget
+              http://tarballs.caas.com.cn/caas/k8s-installer/ki-server-rpms.tar.gz
+              && tar -xvf ki-server-rpms.tar.gz && rm ki-server-rpms.tar.gz &&
+              touch .init; fi
+          resources:
+            limits:
+              cpu: 500m
+              memory: 200Mi
+            requests:
+              cpu: 200m
+              memory: 50Mi
+          volumeMounts:
+            - name: host-time
+              readOnly: true
+              mountPath: /etc/localtime
+            - name: volume-b076fk
+              mountPath: /opt/k8s-installer
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      containers:
+        - name: server
+          image: 'caas4/k8s-installer-server:latest'
+          command:
+            - /app/server
+          ports:
+            - name: http
+              containerPort: 8099
+              protocol: TCP
+            - name: mq
+              containerPort: 9889
+              protocol: TCP
+            - name: resource
+              containerPort: 8079
+              protocol: TCP
+          resources:
+            limits:
+              cpu: '1'
+              memory: 200Mi
+            requests:
+              cpu: 200m
+              memory: 100Mi
+          volumeMounts:
+            - name: volume-2igwyz
+              readOnly: true
+              mountPath: /etc/k8s-installer
+            - name: volume-b076fk
+              mountPath: /opt/k8s-installer
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      serviceAccountName: default
+      serviceAccount: default
+      securityContext: {}
+      affinity: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600

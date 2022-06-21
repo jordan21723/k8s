@@ -1,0 +1,26 @@
+cache:
+  cache-runtime: local-ram
+client-id: #请不要手动设置，会自动生成，除非你希望手动设置改节点的 id，默认生成规则为 server+[ipv4 gateway所在网卡的ip]
+log:
+  log-level: 6
+message-queue:
+  auth-mode: basic
+  ca-cert-path: ""
+  cert-path: ""
+  cluster-port: 9890
+  key-path: ""
+  message-queue-group-name: caas-node-status-report-queue
+  message-queue-leader: 127.0.0.1
+  message-queue-node-status-report-in-subject: caas-node-status-report-subject
+  message-queue-server-address: 172.16.206.235 # 消息队列启动在 server 的地址
+  message-queue-server-listening-on: 0.0.0.0
+  message-queue-subject-suffix: k8s-install
+  password: password
+  port: 9889
+  time-out-seconds: 10
+  username: username
+offline: false # true | false 目前只实现了 online
+offline-package-path: /tmp/k8s-install-offline # 临时保存消息队列直接传输过来的文件存储位置
+signal-port: 9090 # 保持默认，客户端动态检测端口
+stat-report-in-frequency: 60 # 客户端汇报状态的频率
+yaml-data-dir: /tmp/k8s-install-yaml

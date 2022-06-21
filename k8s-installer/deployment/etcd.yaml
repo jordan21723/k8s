@@ -1,0 +1,136 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ki-etcd
+  namespace: k8s-installer
+  labels:
+    app: ki-etcd
+spec:
+  ports:
+    - name: client
+      protocol: TCP
+      port: 2379
+      targetPort: 2379
+    - name: peer
+      protocol: TCP
+      port: 2380
+      targetPort: 2380
+    - name: metric
+      protocol: TCP
+      port: 2381
+      targetPort: 2381
+  selector:
+    app: ki-etcd
+  type: ClusterIP
+  sessionAffinity: None
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ki-etcd
+  namespace: k8s-installer
+  labels:
+    app: ki-etcd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ki-etcd
+  template:
+    metadata:
+      labels:
+        app: ki-etcd
+    spec:
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+            type: ''
+        - name: volume-j2l79k
+          persistentVolumeClaim:
+            claimName: ki-etcd
+      containers:
+        - name: etcd
+          image: '10.0.0.5:4000/etcd:3.4.3-0'
+          command:
+            - etcd
+          args:
+            - '--advertise-client-urls=http://ki-etcd.k8s-installer.svc:2379'
+            - >-
+              --initial-advertise-peer-urls=http://ki-etcd.k8s-installer.svc:2380
+            - '--initial-cluster=infra0=http://ki-etcd.k8s-installer.svc:2380'
+            - '--listen-client-urls=http://0.0.0.0:2379'
+            - '--listen-metrics-urls=http://0.0.0.0:2381'
+            - '--listen-peer-urls=http://0.0.0.0:2380'
+            - '--name=infra0'
+            - '--snapshot-count=10000'
+            - '--data-dir=/var/lib/etcd'
+          ports:
+            - name: client
+              containerPort: 2379
+              protocol: TCP
+            - name: peer
+              containerPort: 2380
+              protocol: TCP
+            - name: metric
+              containerPort: 2381
+              protocol: TCP
+          resources:
+            limits:
+              cpu: '1'
+              memory: 600Mi
+            requests:
+              cpu: 500m
+              memory: 400Mi
+          volumeMounts:
+            - name: host-time
+              readOnly: true
+              mountPath: /etc/localtime
+            - name: volume-j2l79k
+              mountPath: /var/lib/etcd
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 2381
+              scheme: HTTP
+            initialDelaySeconds: 15
+            timeoutSeconds: 15
+            periodSeconds: 8
+            successThreshold: 1
+            failureThreshold: 3
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      serviceAccountName: default
+      serviceAccount: default
+      securityContext: {}
+      affinity: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ki-etcd
+  namespace: k8s-installer
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: fuseim.pri/ifs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: nfs-sc
+  volumeMode: Filesystem

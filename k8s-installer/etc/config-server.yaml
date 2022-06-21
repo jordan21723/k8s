@@ -1,0 +1,32 @@
+api-server:
+  api-port: 9090 # 管理 api 监听的地址
+cache:
+  cache-runtime: local-ram # local-ram = 使用本地内存，当master为多节点的时候，不能使用该模式。  no-cache = 没有本地cache 除了节点的本地配置以外，全部直接从数据库读取
+etcd:
+  etcd-auth-mode: none # 认证模式 none = 无需验证 tls = 使用 tls 认证
+  etcd-ca-file-path: /etc/etcd/etcd-client-ca.crt # etcd 数据库的 ca 证书路径
+  etcd-cert-file-path: /etc/etcd/etcd-client.crt # etcd 数据库的证书路径
+  etcd-endpoints: https://etcd-node1:2379 | https://etcd-node2:2379 | https://etcd-node3:2379 # etcd集群的链接地址，如果是单节点 http://127.0.0.1:2379
+  etcd-key-file-path: /etc/etcd/etcd-client.key # etcd 数据库的 key 文件路径
+log:
+  log-level: 6 # 日志等级 0=PanicLevel 1=FatalLevel 2=ErrorLevel 3=WarnLevel 4=WarnLevel 5=InfoLevel 6=DebugLevel 7=TraceLevel
+message-queue:
+  auth-mode: basic # 认证模式 basic = 用户名 + 密码 tls = 使用 tls 认证
+  ca-cert-path: "" 消息队列的 ca 证书文件的路径
+  cert-path: "" # 消息队列的证书文件的路径
+  cluster-port: 9890
+  key-path: "" # 消息队列的 key 文件的路径
+  message-queue-group-name: caas-node-status-report-queue # 保持默认，当 master 有多副本时，只有一个 master 会收到客户端的消息，他们用的 group 的名称
+  message-queue-leader: 127.0.0.1 # 保持默认，消息队列的集群的 leader
+  message-queue-node-status-report-in-subject: caas-node-status-report-subject # 保持默认，消息队列接收节点状态汇报的频道
+  message-queue-server-address: 127.0.0.1 # 保持默认，消息队列 server 的地址
+  message-queue-server-listening-on: 0.0.0.0 # 保持默认，消息队列启动在那个 ip 上
+  message-queue-subject-suffix: k8s-install # 保持默认，消息频道的后缀
+  password: password # 启动消息队列用密码
+  port: 9889 # 启动消息队列的 端口
+  username: username # 启动消息队列用户名
+server-id: #请不要手动设置，会自动生成，除非你希望手动设置改节点的 id，默认生成规则为 server+[ipv4 gateway所在网卡的ip]
+signal-port: 9090 # 保持默认，客户端动态检测端口
+host-requirement:
+  SupportOSFamily: centos # 目前只写了 centos 7 的脚本
+  SupportOSFamilyVersion: 7 # 目前只支持 7.x

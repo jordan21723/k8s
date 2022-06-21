@@ -1,0 +1,325 @@
+{
+  "k8s-installer/components/helmhelm.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "helm": "helm"
+        },
+        "x86_64": {
+          "helm": "helm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/components/ntpntp.NTPDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "ntp": "chrony-3.4-1.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "ntp": "chrony-3.4-1.el7.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/components/velerovelero.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "velero": "velero"
+        },
+        "x86_64": {
+          "velero": "velero"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/node/container_runtime/containerdcontainerd.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "7:lvm2-2.02.186-7": "7:lvm2-2.02.186-7.el7_8.2.aarch64.rpm",
+          "apr-util": "apr-util-1.5.2-6.el7.x86_64.rpm",
+          "containerd.io": "containerd.io-1.4.4-3.1.el7.aarch64.rpm",
+          "device-mapper-persistent-data": "device-mapper-persistent-data-0.8.5-2.el7.aarch64.rpm",
+          "httpd-tools": "httpd-tools-2.4.6-95.el7.centos.aarch64.rpm",
+          "kata-proxy": "kata-proxy-1.12.0~alpha0-48.1.aarch64.rpm",
+          "kata-runtime": "kata-runtime-1.12.0~alpha0-68.1.aarch64.rpm",
+          "kata-shim": "kata-shim-1.12.0~alpha0-46.1.aarch64.rpm"
+        },
+        "x86_64": {
+          "apr": "apr-1.4.8-7.el7.x86_64.rpm",
+          "apr-util": "apr-util-1.5.2-6.el7.x86_64.rpm",
+          "containerd.io": "containerd.io-1.4.4-3.1.el7.x86_64.rpm",
+          "device-mapper-persistent-data": "device-mapper-persistent-data-0.8.5-3.el7_9.2.x86_64.rpm",
+          "httpd-tools": "httpd-tools-2.4.6-97.el7.centos.x86_64.rpm",
+          "kata-proxy": "kata-proxy-1.11.5-10.1.x86_64.rpm",
+          "kata-runtime": "kata-runtime-1.11.5-10.1.x86_64.rpm",
+          "kata-shim": "kata-shim-1.11.5-10.1.x86_64.rpm",
+          "lvm2-2.02.186-7": "lvm2-2.02.186-7.el7_8.2.src.rpm",
+          "mock": "mock-2.6-1.el7.noarch.rpm",
+          "mock-core": "mock-core-configs-33.3-1.el7.noarch.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/node/container_runtime/dockerdocker.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "container-selinux": "container-selinux-2.119.2-1.911c772.el7_8.noarch.rpm",
+          "containerd.io": "containerd.io-1.2.13-3.2.el7.aarch64.rpm",
+          "docker-ce": "docker-ce-19.03.12-3.el7.aarch64.rpm",
+          "docker-ce-cli": "docker-ce-cli-19.03.12-3.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "apr": "apr-1.4.8-7.el7.x86_64.rpm",
+          "apr-util": "apr-util-1.5.2-6.el7.x86_64.rpm",
+          "audit-libs-python": "audit-libs-python-2.8.5-4.el7.x86_64.rpm",
+          "checkpolicy": "checkpolicy-2.5-8.el7.x86_64.rpm",
+          "container-selinux": "container-selinux-2.119.2-1.911c772.el7_8.noarch.rpm",
+          "containerd.io": "containerd.io-1.2.13-3.2.el7.x86_64.rpm",
+          "docker-ce": "docker-ce-19.03.12-3.el7.x86_64.rpm",
+          "docker-ce-cli": "docker-ce-cli-19.03.12-3.el7.x86_64.rpm",
+          "httpd-tools": "httpd-tools-2.4.6-97.el7.centos.x86_64.rpm",
+          "libcgroup": "libcgroup-0.41-21.el7.x86_64.rpm",
+          "libsemanage-python": "libsemanage-python-2.5-14.el7.x86_64.rpm",
+          "policycoreutils": "policycoreutils-2.5-34.el7.x86_64.rpm",
+          "policycoreutils-python": "policycoreutils-python-2.5-34.el7.x86_64.rpm",
+          "python-IPy": "python-IPy-0.75-6.el7.noarch.rpm",
+          "setools-libs": "setools-libs-3.3.8-4.el7.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/node/k8sk8s.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "conntrack": "conntrack-tools-1.4.4-7.el7.aarch64.rpm",
+          "cri-tools": "cri-tools-1.13.0-0.aarch64.rpm",
+          "ebtables": "ebtables-2.0.10-16.el7.aarch64.rpm",
+          "ipvsadm": "ipvsadm-1.27-8.el7.aarch64.rpm",
+          "kubeadm": "kubeadm-1.18.6-0.aarch64.rpm",
+          "kubectl": "kubectl-1.18.6-0.aarch64.rpm",
+          "kubelet": "kubelet-1.18.6-0.aarch64.rpm",
+          "kubernetes-cni": "kubernetes-cni-0.8.7-0.aarch64.rpm",
+          "libnetfilter_cthelper": "libnetfilter_cthelper-1.0.0-11.el7.aarch64.rpm",
+          "libnetfilter_cttimeout": "libnetfilter_cttimeout-1.0.0-7.el7.aarch64.rpm",
+          "libnetfilter_queue": "libnetfilter_queue-1.0.2-2.el7.aarch64.rpm",
+          "socat": "socat-1.7.3.2-2.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "conntrack": "conntrack-tools-1.4.4-7.el7.x86_64.rpm",
+          "cri-tools": "cri-tools-1.13.0-0.x86_64.rpm",
+          "ebtables": "ebtables-2.0.10-16.el7.x86_64.rpm",
+          "ipvsadm": "ipvsadm-1.27-8.el7.x86_64.rpm",
+          "kubeadm": "kubeadm-1.18.6-0.x86_64.rpm",
+          "kubectl": "kubectl-1.18.6-0.x86_64.rpm",
+          "kubelet": "kubelet-1.18.6-0.x86_64.rpm",
+          "kubernetes-cni": "kubernetes-cni-0.8.6-0.x86_64.rpm",
+          "libnetfilter_cthelper": "libnetfilter_cthelper-1.0.0-11.el7.x86_64.rpm",
+          "libnetfilter_cttimeout": "libnetfilter_cttimeout-1.0.0-7.el7.x86_64.rpm",
+          "libnetfilter_queue": "libnetfilter_queue-1.0.2-2.el7_2.x86_64.rpm",
+          "socat": "socat-1.7.3.2-2.el7.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/node/loadbalancerloadbalancer.Deps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "haproxy": "haproxy-1.5.18-9.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "haproxy": "haproxy-1.5.18-9.el7.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/pkg/dep_registrydep_registry.DockerPyDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "python-backports": "python-backports-1.0-8.el7.aarch64.rpm",
+          "python-backports-ssl_match_hostname": "python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm",
+          "python-chardet": "python-chardet-2.2.1-3.el7.noarch.rpm",
+          "python-docker-py": "python-docker-py-1.10.6-9.el7_6.noarch.rpm",
+          "python-docker-pycreds": "python-docker-pycreds-0.3.0-11.el7.noarch.rpm",
+          "python-ipaddress": "python-ipaddress-1.0.16-2.el7.noarch.rpm",
+          "python-requests": "python-requests-2.6.0-10.el7.noarch.rpm",
+          "python-six": "python-six-1.9.0-2.el7.noarch.rpm",
+          "python-urllib3": "python-urllib3-1.10.2-7.el7.noarch.rpm",
+          "python-websocket-client": "python-websocket-client-0.56.0-3.git3c25814.el7.noarch.rpm"
+        },
+        "x86_64": {
+          "python-backports": "python-backports-1.0-8.el7.x86_64.rpm",
+          "python-backports-ssl_match_hostname": "python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm",
+          "python-chardet": "python-chardet-2.2.1-3.el7.noarch.rpm",
+          "python-docker-py": "python-docker-py-1.10.6-9.el7_6.noarch.rpm",
+          "python-docker-pycreds": "python-docker-pycreds-0.3.0-11.el7.noarch.rpm",
+          "python-ipaddress": "python-ipaddress-1.0.16-2.el7.noarch.rpm",
+          "python-requests": "python-requests-2.6.0-10.el7.noarch.rpm",
+          "python-six": "python-six-1.9.0-2.el7.noarch.rpm",
+          "python-urllib3": "python-urllib3-1.10.2-7.el7.noarch.rpm",
+          "python-websocket-client": "python-websocket-client-0.56.0-3.git3c25814.el7.noarch.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/pkg/dep_registrydep_registry.GrafanaDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "grafana": "grafana-6.7.3-1.aarch64.rpm"
+        },
+        "x86_64": {
+          "grafana": "grafana-6.7.3-1.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/pkg/dep_registrydep_registry.NFSUtilsDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "gssproxy": "gssproxy-0.7.0-29.el7.aarch64.rpm",
+          "keyutils": "keyutils-1.5.8-3.el7.aarch64.rpm",
+          "libbasicobjects": "libbasicobjects-0.1.1-32.el7.aarch64.rpm",
+          "libcollection": "libcollection-0.7.0-32.el7.aarch64.rpm",
+          "libevent": "libevent-2.0.21-4.el7.aarch64.rpm",
+          "libnfsidmap": "libnfsidmap-0.25-19.el7.aarch64.rpm",
+          "libnl": "libnl-1.1.4-3.el7.aarch64.rpm",
+          "libpath_utils": "libpath_utils-0.2.1-32.el7.aarch64.rpm",
+          "libref_array": "libref_array-0.1.5-32.el7.aarch64.rpm",
+          "libtirpc": "libtirpc-0.2.4-0.16.el7.aarch64.rpm",
+          "libverto-libevent": "libverto-libevent-0.2.5-4.el7.aarch64.rpm",
+          "nfs-utils": "nfs-utils-1.3.0-0.68.el7.aarch64.rpm",
+          "quota": "quota-4.01-19.el7.aarch64.rpm",
+          "quota-nld": "quota-nld-4.01-19.el7.aarch64.rpm",
+          "quota-nls": "quota-nls-4.01-19.el7.noarch.rpm",
+          "rpcbind": "rpcbind-0.2.0-49.el7.aarch64.rpm",
+          "tcp_wrappers": "tcp_wrappers-7.6-77.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "gssproxy": "gssproxy-0.7.0-29.el7.x86_64.rpm",
+          "keyutils": "keyutils-1.5.8-3.el7.x86_64.rpm",
+          "libbasicobjects": "libbasicobjects-0.1.1-32.el7.x86_64.rpm",
+          "libcollection": "libcollection-0.7.0-32.el7.x86_64.rpm",
+          "libevent": "libevent-2.0.21-4.el7.x86_64.rpm",
+          "libnfsidmap": "libnfsidmap-0.25-19.el7.x86_64.rpm",
+          "libnl": "libnl-1.1.4-3.el7.x86_64.rpm",
+          "libpath_utils": "libpath_utils-0.2.1-32.el7.x86_64.rpm",
+          "libref_array": "libref_array-0.1.5-32.el7.x86_64.rpm",
+          "libtirpc": "libtirpc-0.2.4-0.16.el7.x86_64.rpm",
+          "libverto-libevent": "libverto-libevent-0.2.5-4.el7.x86_64.rpm",
+          "nfs-utils": "nfs-utils-1.3.0-0.68.el7.x86_64.rpm",
+          "quota": "quota-4.01-19.el7.x86_64.rpm",
+          "quota-nld": "quota-nld-4.01-19.el7.x86_64.rpm",
+          "quota-nls": "quota-nls-4.01-19.el7.noarch.rpm",
+          "rpcbind": "rpcbind-0.2.0-49.el7.x86_64.rpm",
+          "tcp_wrappers": "tcp_wrappers-7.6-77.el7.x86_64.rpm"
+        }
+      }
+    },
+    "ubuntu": {}
+  },
+  "k8s-installer/pkg/task_breakertask_breaker.KeepaliveDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "keepalived": "keepalived-1.3.5-16.el7.aarch64.rpm",
+          "lm_sensors-libs.rpm": "lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.aarch64.rpm",
+          "net-snmp-agent-libs.rpm": "net-snmp-agent-libs-5.7.2-47.el7.aarch64.rpm",
+          "net-snmp-libs.rpm": "net-snmp-libs-5.7.2-47.el7.aarch64.rpm",
+          "perl-Carp.rpm": "perl-Carp-1.26-244.el7.noarch.rpm",
+          "perl-Encode.rpm": "perl-Encode-2.51-7.el7.aarch64.rpm",
+          "perl-Exporter.rpm": "perl-Exporter-5.68-3.el7.noarch.rpm",
+          "perl-File-Path.rpm": "perl-File-Path-2.09-2.el7.noarch.rpm",
+          "perl-File-Temp.rpm": "perl-File-Temp-0.23.01-3.el7.noarch.rpm",
+          "perl-Filter.rpm": "perl-Filter-1.49-3.el7.aarch64.rpm",
+          "perl-Getopt-Long.rpm": "perl-Getopt-Long-2.40-3.el7.noarch.rpm",
+          "perl-HTTP-Tiny.rpm": "perl-HTTP-Tiny-0.033-3.el7.noarch.rpm",
+          "perl-PathTools.rpm": "perl-PathTools-3.40-5.el7.aarch64.rpm",
+          "perl-Pod-Escapes.rpm": "perl-Pod-Escapes-1.04-297.el7.noarch.rpm",
+          "perl-Pod-Perldoc.rpm": "perl-Pod-Perldoc-3.20-4.el7.noarch.rpm",
+          "perl-Pod-Simple.rpm": "perl-Pod-Simple-3.28-4.el7.noarch.rpm",
+          "perl-Pod-Usage.rpm": "perl-Pod-Usage-1.63-3.el7.noarch.rpm",
+          "perl-Scalar-List-Utils.rpm": "perl-Scalar-List-Utils-1.27-248.el7.aarch64.rpm",
+          "perl-Socket.rpm": "perl-Socket-2.010-5.el7.aarch64.rpm",
+          "perl-Storable.rpm": "perl-Storable-2.45-3.el7.aarch64.rpm",
+          "perl-Text-ParseWords.rpm": "perl-Text-ParseWords-3.29-4.el7.noarch.rpm",
+          "perl-Time-HiRes.rpm": "perl-Time-HiRes-1.9725-3.el7.aarch64.rpm",
+          "perl-Time-Local.rpm": "perl-Time-Local-1.2300-2.el7.noarch.rpm",
+          "perl-constant.rpm": "perl-constant-1.27-2.el7.noarch.rpm",
+          "perl-libs.rpm": "perl-libs-5.16.3-297.el7.aarch64.rpm",
+          "perl-macros.rpm": "perl-macros-5.16.3-297.el7.aarch64.rpm",
+          "perl-parent.rpm": "perl-parent-0.225-244.el7.noarch.rpm",
+          "perl-podlators.rpm": "perl-podlators-2.5.1-3.el7.noarch.rpm",
+          "perl-threads-shared.rpm": "perl-threads-shared-1.43-6.el7.aarch64.rpm",
+          "perl-threads.rpm": "perl-threads-1.87-4.el7.aarch64.rpm",
+          "perl.rpm": "perl-5.16.3-297.el7.aarch64.rpm",
+          "psmisc.rpm": "psmisc-22.20-16.el7.aarch64.rpm"
+        },
+        "x86_64": {
+          "keepalived": "keepalived-1.3.5-16.el7.x86_64.rpm",
+          "lm_sensors-libs.rpm": "lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64.rpm",
+          "net-snmp-agent-libs.rpm": "net-snmp-agent-libs-5.7.2-47.el7.x86_64.rpm",
+          "net-snmp-libs.rpm": "net-snmp-libs-5.7.2-47.el7.x86_64.rpm",
+          "perl-Carp.rpm": "perl-Carp-1.26-244.el7.noarch.rpm",
+          "perl-Encode.rpm": "perl-Encode-2.51-7.el7.x86_64.rpm",
+          "perl-Exporter.rpm": "perl-Exporter-5.68-3.el7.noarch.rpm",
+          "perl-File-Path.rpm": "perl-File-Path-2.09-2.el7.noarch.rpm",
+          "perl-File-Temp.rpm": "perl-File-Temp-0.23.01-3.el7.noarch.rpm",
+          "perl-Filter.rpm": "perl-Filter-1.49-3.el7.x86_64.rpm",
+          "perl-Getopt-Long.rpm": "perl-Getopt-Long-2.40-3.el7.noarch.rpm",
+          "perl-HTTP-Tiny.rpm": "perl-HTTP-Tiny-0.033-3.el7.noarch.rpm",
+          "perl-PathTools.rpm": "perl-PathTools-3.40-5.el7.x86_64.rpm",
+          "perl-Pod-Escapes.rpm": "perl-Pod-Escapes-1.04-297.el7.noarch.rpm",
+          "perl-Pod-Perldoc.rpm": "perl-Pod-Perldoc-3.20-4.el7.noarch.rpm",
+          "perl-Pod-Simple.rpm": "perl-Pod-Simple-3.28-4.el7.noarch.rpm",
+          "perl-Pod-Usage.rpm": "perl-Pod-Usage-1.63-3.el7.noarch.rpm",
+          "perl-Scalar-List-Utils.rpm": "perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm",
+          "perl-Socket.rpm": "perl-Socket-2.010-5.el7.x86_64.rpm",
+          "perl-Storable.rpm": "perl-Storable-2.45-3.el7.x86_64.rpm",
+          "perl-Text-ParseWords.rpm": "perl-Text-ParseWords-3.29-4.el7.noarch.rpm",
+          "perl-Time-HiRes.rpm": "perl-Time-HiRes-1.9725-3.el7.x86_64.rpm",
+          "perl-Time-Local.rpm": "perl-Time-Local-1.2300-2.el7.noarch.rpm",
+          "perl-constant.rpm": "perl-constant-1.27-2.el7.noarch.rpm",
+          "perl-libs.rpm": "perl-libs-5.16.3-297.el7.x86_64.rpm",
+          "perl-macros.rpm": "perl-macros-5.16.3-297.el7.x86_64.rpm",
+          "perl-parent.rpm": "perl-parent-0.225-244.el7.noarch.rpm",
+          "perl-podlators.rpm": "perl-podlators-2.5.1-3.el7.noarch.rpm",
+          "perl-threads-shared.rpm": "perl-threads-shared-1.43-6.el7.x86_64.rpm",
+          "perl-threads.rpm": "perl-threads-1.87-4.el7.x86_64.rpm",
+          "perl.rpm": "perl-5.16.3-297.el7.x86_64.rpm",
+          "psmisc.rpm": "psmisc-22.20-16.el7.x86_64.rpm"
+        }
+      }
+    }
+  },
+  "k8s-installer/pkg/task_breakertask_breaker.TraefikDeps": {
+    "centos": {
+      "1.18.6": {
+        "aarch64": {
+          "traefik": "traefik"
+        },
+        "x86_64": {
+          "traefik": "traefik"
+        }
+      }
+    },
+    "ubuntu": {}
+  }
+}
